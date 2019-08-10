@@ -1,0 +1,7 @@
+[package]
+name = "rust-cookbook"
+version = "0.1.0"
+authors = ["Ben <ben@webtools.co.nz>"]
+edition = "2018"
+
+[dependencies]
