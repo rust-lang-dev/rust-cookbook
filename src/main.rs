@@ -1,4 +1,5 @@
 extern crate clap;
+extern crate ansi_term;
 mod data_structure;
 use clap::{App, Arg};
 

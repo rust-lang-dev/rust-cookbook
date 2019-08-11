@@ -1,3 +1,5 @@
+use ansi_term::Colour;
+
 #[derive(Clone, Debug)]
 struct StackNode<T> {
     val: T,
@@ -34,7 +36,7 @@ impl<T> Stack<T> {
 }
 
 pub fn test() {
-    println!("Running Stack Receipt:");
+    println!("{}", Colour::Green.bold().paint("Running Stack Receipt:"));
     #[derive(Debug)]
     struct StackTest {
         a: i32,

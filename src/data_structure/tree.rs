@@ -1,3 +1,5 @@
+use ansi_term::Colour;
+
 #[derive(Debug)]
 struct TreeNode<K, V> {
     key: K,
@@ -37,7 +39,7 @@ impl<K: PartialOrd, V> BinarySearchTree<K, V> for TreeNode<K, V> {
 }
 
 pub fn test() {
-    println!("Running Tree Receipt:");
+    println!("{}", Colour::Green.bold().paint("Running Tree Receipt:"));
     let mut root = TreeNode::new(3, 4);
     root.insert(2, 10);
     root.insert(4, 11);

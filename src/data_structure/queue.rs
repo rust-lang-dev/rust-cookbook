@@ -1,3 +1,5 @@
+use ansi_term::Colour;
+
 #[derive(Debug)]
 struct Queue<T> {
     q: Vec<T>,
@@ -19,7 +21,7 @@ impl<T> Queue<T> {
 }
 
 pub fn test() {
-    println!("Running Queue Receipt:");
+    println!("{}", Colour::Green.bold().paint("Running Queue Receipt:"));
     let mut queue = Queue::new();
     println!("{:?}", queue);
     println!("{:?}", queue.pop());
