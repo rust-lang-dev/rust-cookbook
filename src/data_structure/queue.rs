@@ -18,8 +18,9 @@ impl<T> Queue<T> {
     }
 }
 
-fn main() {
-    let mut queue = Queue::<i32>::new();
+pub fn test() {
+    println!("Running Queue Receipt:");
+    let mut queue = Queue::new();
     println!("{:?}", queue);
     println!("{:?}", queue.pop());
     queue.push(1);

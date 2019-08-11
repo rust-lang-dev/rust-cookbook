@@ -33,7 +33,8 @@ impl<T> Stack<T> {
     }
 }
 
-fn main() {
+pub fn test() {
+    println!("Running Stack Receipt:");
     #[derive(Debug)]
     struct StackTest {
         a: i32,

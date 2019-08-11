@@ -36,7 +36,8 @@ impl<K: PartialOrd, V> BinarySearchTree<K, V> for TreeNode<K, V> {
     }
 }
 
-fn main() {
+pub fn test() {
+    println!("Running Tree Receipt:");
     let mut root = TreeNode::new(3, 4);
     root.insert(2, 10);
     root.insert(4, 11);
