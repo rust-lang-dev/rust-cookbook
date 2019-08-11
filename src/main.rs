@@ -1,11 +1,14 @@
 extern crate clap;
 mod data_structure;
 use clap::{App, Arg};
-use data_structure::stack;
+
 use data_structure::queue;
+use data_structure::stack;
 use data_structure::tree;
 
 fn main() {
+    let help_info = "Index:\n1.stack\n2.queue\n3.tree";
+
     let matches = App::new("Hello World")
         .version("0.0.1")
         .author("Ben")
@@ -15,7 +18,7 @@ fn main() {
                 .short("i")
                 .long("index")
                 .takes_value(true)
-                .help("Index:\n1.stack"),
+                .help(help_info),
         )
         .get_matches();
 
