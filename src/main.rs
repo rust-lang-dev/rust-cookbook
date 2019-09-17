@@ -8,7 +8,7 @@ use basic::*;
 use data_structure::*;
 
 fn main() {
-    let help_info = "Index:\n1.stack\t 2.queue\t 3.tree\t 4.linked_list\t 5.string";
+    let help_info = "Index:\n1.stack\t 2.queue\t 3.tree\t 4.linked_list\t 5.string\t 6.format";
 
     let matches = App::new("Hello World")
         .version("0.0.1")
@@ -40,6 +40,7 @@ fn run_receipt(index: i32) {
         3 => tree::test(),
         4 => linked_list::test(),
         5 => string::test(),
+        6 => format::test(),
         _ => println!("Unknown index"),
     }
 }
