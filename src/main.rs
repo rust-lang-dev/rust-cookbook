@@ -3,17 +3,20 @@ extern crate clap;
 mod basic;
 mod data_structure;
 mod file;
+mod net;
 use clap::{App, Arg};
 
 use basic::*;
 use data_structure::*;
 use file::*;
+use net::*;
 
 fn main() {
     let help_info = "Index:\n
         1.stack 2.queue 3.tree\n
         4.linked list 5.string 6.format\n
-        7.builder 8.env 9. basic file\n";
+        7.builder 8.env 9. basic file\n
+        10.server";
 
     let matches = App::new("Hello World")
         .version("0.0.1")
@@ -49,6 +52,7 @@ fn run_receipt(index: i32) {
         7 => builder::test(),
         8 => env::test(),
         9 => basic_file::test(),
+        10 => server::start_server(),
         _ => println!("Unknown index"),
     }
 }
